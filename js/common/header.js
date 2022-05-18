@@ -22,6 +22,8 @@
             $('.gnavi__sp-style').removeClass('active');
         }
     });
+
+    popupImage();//移動
 });
 
 // 連絡先ポップアップ
@@ -43,4 +45,3 @@ function popupImage() {
       });
     }
   }
-  popupImage();
