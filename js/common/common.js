@@ -1,17 +1,17 @@
 //**************************************
 //ヘッダー
 //**************************************
-function header(){
-    $.ajax({
-        url: '../../html/common/header.html',
-        cache: false,
-        async: false,
-        dataType: 'html',
-        success: function(html){
-            document.write(html);
-        }
-    });
-}
+// function header(){
+//     $.ajax({
+//         url: '../../html/common/header.html',
+//         cache: false,
+//         async: false,
+//         dataType: 'html',
+//         success: function(html){
+//             document.write(html);
+//         }
+//     });
+// }
 // // //**************************************
 // // //フッター
 // // //**************************************
@@ -43,6 +43,9 @@ function header(){
 //     });
 //   });
 
+$(function(){
+    $("#header").load("../../html/common/header.html");
+    });
   
 //   $(function(){
 //     $("#box").load("./header.html");
