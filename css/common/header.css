@@ -1,0 +1,245 @@
+@charset "UTF-8";
+/* ヘッダーのスタイル */
+
+
+header {
+  width: auto;
+  height: auto;
+}
+
+div#logoLink{
+  display: flex;
+
+    align-items: center;
+    /* ロゴとリンク画像の横の位置を固定しながら移動させるためにこちらに記述した */
+    padding-top: 1rem;
+}
+/* ロゴ画像 */
+div#logo{
+  width: 18.75em;
+  height: 9.375em;
+  margin-left: 10rem;
+
+}
+ div#logo img{
+    width: 18.75em; 
+    height: 9.375em; 
+}
+/* 連絡先画像 */
+div#link{
+  width: 2rem;
+  height: 2rem;
+  margin-left: auto;
+  margin-right: 10rem;
+
+}
+div#link img{
+    display: block;
+    width: 2rem; 
+    height: 2rem; 
+} 
+
+/* 連絡先ポップアップ */
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s;
+}
+.popup.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 50px;
+  background-color: #fff;
+  z-index: 2;
+}
+.popup-inner img {
+  width: 100%;
+}
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.close-btn i {
+  font-size: 20px;
+  color: #333;
+}
+.black-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* -------ナビゲーション---------------------- */
+
+  
+.gnavi__pc-style {
+  width: 20rem;
+  margin: 0  5rem 3rem  auto;
+  font-size: 0.9rem;
+}
+.gnavi__pc-style ul {
+display: flex;
+justify-content: space-between;
+}
+.gnavi__pc-style ul li {
+  /* 親要素3分割 */
+  width : 33.33333% ; /* 未対応ブラウザ用フォールバック */
+  width : -webkit-calc(100% / 3) ;
+  width : calc(100% / 3) ;
+  text-align: center;
+  border-bottom: 3px solid #FFF;
+}
+.gnavi__pc-style ul li:hover{
+color: #E7DA66;
+border-bottom: 3px solid #F0E475;
+}
+.gnavi__pc-style ul li a{
+    text-decoration: none;
+    color: #555;
+    padding-bottom: 5px;
+  }
+
+/*ここから下がハンバーガーメニューのスタイル*/
+.gnavi__sp-style {
+display: none;
+}
+@media screen and (max-width: 768px) {/* 767px以下用（タブレット／スマートフォン用）の記述 */
+.gnavi__pc-style {
+display: none;    
+}
+.gnavi__sp-style {
+display: block;
+}
+
+/*メニューボタン　展開前*/
+.menu-btn {
+display : block;
+position: fixed;
+z-index : 3;
+right : 30px;
+top   : 20px;
+width : 42px;
+height: 42px;
+cursor: pointer;
+text-align: center;
+}
+.menu-btn span {
+display : block;
+position: absolute;
+width   : 30px;
+height  : 2px ;
+left    : 6px;
+background : #555;
+-webkit-transition: 0.3s ease-in-out;
+-moz-transition   : 0.3s ease-in-out;
+transition        : 0.3s ease-in-out;
+}
+.menu-btn span:nth-of-type(1) {
+top: 10px;
+}
+.menu-btn span:nth-of-type(2) {
+top: 20px;
+}
+.menu-btn span:nth-of-type(3) {
+top: 30px;
+}
+
+/*メニューボタン　展開後*/
+.menu-btn.active span:nth-child(1) {
+top : 16px;
+left: 6px;
+background :#fff;
+-webkit-transform: rotate(-45deg);
+-moz-transform   : rotate(-45deg);
+transform        : rotate(-45deg);
+}
+.menu-btn.active span:nth-child(2),
+.menu-btn.active span:nth-child(3) {
+top: 16px;
+background :#fff;
+-webkit-transform: rotate(45deg);
+-moz-transform   : rotate(45deg);
+transform        : rotate(45deg);
+}
+
+/*スマホ用のメニュー*/
+.gnavi__sp-style {
+position: fixed;
+z-index: 2;
+top: 0;
+left: 0;
+color: #fff;
+background-color: rgba(0,0,0,0.7);
+text-align: center;
+width: 100%;
+  height: 100vh;
+opacity: 0;
+transition: opacity .6s ease, visibility .6s ease;
+  display: flex;
+  align-items: center;
+}
+.gnavi__sp-style ul {
+margin: 0 auto;
+padding: 0;
+width: 100%;
+}
+.gnavi__sp-style ul li {
+list-style-type: none;
+padding: 0;
+width: 100%;
+transition: .4s all;
+}
+.gnavi__sp-style ul li:last-of-type {
+padding-bottom: 0;
+}
+.gnavi__sp-style ul li:hover{
+background :#ddd;
+}
+.gnavi__sp-style ul li a {
+display: block;
+color: #fff;
+padding: 1em 0;
+text-decoration :none;
+}
+.gnavi__sp-style.active {
+opacity: 1;
+}
+}
+/* ヘッダーの一言 */
+div#headerWord{
+  width:fit-content;
+  margin:7rem auto 0 auto;
+  font-family: Monotype Corsiva;
+  font-size: 1.9rem;
+  color: #888;
+}
+/* ヘッダー画像 */
+div#headerImage{
+  margin-top: 6rem;
+}
+
