@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+div#main {
+
+    color: #777;
+    font-family: 'ＭＳ Ｐ明朝';
+}
+
+h2 {
+
+    text-align: center;
+    font-weight: 100;
+    font-size: 50px;
+
+}
+
+/* ヘッダーの一言 */
+div#headerWord {
+    width: fit-content;
+    margin: 7rem auto 0 auto;
+    font-family: 'Monotype Corsiva';
+    font-size: 1.9rem;
+}
+
+/* ヘッダー画像 */
+div#headerImage {
+    margin-top: 6rem;
+}
+
+
+/* Service */
+section#serviceSection {
+    max-width: 940px;
+    /*少し大きめに幅を取っている*/
+    height: auto;
+    margin: 5rem auto 6rem auto;
+    font-weight: normal;
+    /* background-color: rgba(117, 190, 218, 0.5); */
+}
+
+div#serviceBox {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div.serviceItems {
+    width: 300px;
+    padding: 2rem;
+    text-align: center;
+}
+
+div.serviceItems h3 {
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+div.serviceItems h4 {
+    font-weight: normal;
+}
+
+div.serviceItems div.serviceImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 189px;
+    margin: 0 auto;
+}
+
+div.serviceItems p {
+    line-height: 1.9;
+}
+
+/* Study */
+section#studySection {
+    max-width: 940px;
+    height: auto;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+section#studySection div#studyBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+
+section#studySection div#studyBox div.studyItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+}
+
+
+/* ホバー処理 */
+
+.studyItems {
+    overflow: hidden;
+    position: relative;
+    /* 相対位置指定 */
+}
+
+.studyItems .caption {
+    font-size: 5rem;
+    margin:auto;
+    color: #fff;
+}
+
+.studyItems .mask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* 絶対位置指定 */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    /* マスクを表示しない */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* マスクは半透明 */
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    margin: auto;
+}
+
+
+.studyItems:hover .mask {
+    opacity: 1;
+    /* マスクを表示する */
+}
+
+
+
+
+
+/* Studyモーダル */
+
+.modal-content {
+	width: auto ;
+	margin: 0 ;
+	padding: 10px 20px ;
+	border: 2px solid #aaa ;
+	background: #fff ;
+	position: fixed ;
+	display: none ;
+	z-index: 2 ;
+}
+  
+#modal-overlay {
+	z-index: 1 ;
+	display: none ;
+	position: fixed ;
+	top: 0 ;
+	left: 0 ;
+	width: 100% ;
+	height: 120% ;
+	background-color: rgba( 0,0,0, 0.75 ) ;
+}
+
+.button-link {
+	color: #00f ;
+	text-decoration: underline ;
+}
+ 
+.button-link:hover {
+	cursor: pointer ;
+	color: #f00 ;
+}

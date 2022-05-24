@@ -11,24 +11,78 @@
   <link rel="stylesheet" href="./css/common/reset.css">
   <link rel="stylesheet" href="./css/common/common.css">
   <link rel="stylesheet" href="./css/common/header.css">
- 
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
 
   <div id="wrapper">
     <html>
-<head>
-	<title>技術メモ</title>
-</head>
-<body>
-	<div id="box"></div>
-	
-</body>
-</html>
 
-    <header id="header"></header>
-    <div id="headerWord">
+    <head>
+      <title>技術メモ</title>
+    </head>
+
+    <body>
+      <div id="box"></div>
+
+    </body>
+
+    </html>
+
+    <header>
+      <!-- ロゴ -->
+      <div id="logoLink">
+        <div id="logo">
+
+          <img src="./images/logo.png" alt="ロゴ">
+
+        </div>
+        <div id="link">
+
+          <a class="modal-syncer button-link" data-target="modal-content-00">
+            <img src="./images/contactAdderss.jpeg" alt="ロゴ">
+          </a>
+        </div>
+          <!-- モーダル処理 -->
+          <div id="modal-content-00" class="modal-content">
+            <img src="./images/contactQR.png" alt="ロゴ">
+            <p><a id="modal-close" class="button-link">閉じる</a></p>
+          </div>
+
+      </div>
+      <!-- ナビゲーション -->
+      <div id="nav">
+
+        <nav class="gnavi__pc-style">
+          <ul>
+            <li><a href="#">profile</a></li>
+            <li><a href="#">target</a></li>
+            <li><a href="#">others</a></li>
+          </ul>
+        </nav>
+
+        <!--768px以下で表示-->
+        <div class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="gnavi__sp-style">
+          <ul>
+            <li><a href="#">profile</a></li>
+            <li><a href="#">target</a></li>
+            <li><a href="#">others</a></li>
+          </ul>
+        </nav>
+        <!--/768px以下で表示-->
+
+      </div>
+      <hr>
+    </header>
+    <div id="main">
+      <div id="headerWord">
         <p>Welcome to the self-introduction site</p>
       </div>
       <div id="headerImage">
@@ -38,129 +92,176 @@
       </div>
 
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><div class="popup" id="js-popup">
-      <div class="popup-inner">
-        <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
-        <a href="#"><img src="./images/contactQR.png" alt="ポップアップ画像"></a>
-      </div>
-      <div class="black-background" id="js-black-bg"></div>
+      <section id="serviceSection">
+        <h2>Service</h2>
+        <div id="serviceBox">
+          <div class="serviceItems">
+            <h3>コーディング</h3>
+            <h4>CORING</h4>
+            <div class="serviceImages">
+              <img src="./images/cording.png" width="100" height="126" alt="ロゴ">
+            </div>
+            <p>
+              詳細設計を元に、システムの実装をすることができます。アプリやWEBサイト、APIなどの製作を行います。主にバックエンドのシステムを作ることが得意です。現在フロントエンドの学習を行っており、なんでもできる人を目指しています。
+            </p>
+          </div>
+          <div class="serviceItems">
+            <h3>リーダシップ</h3>
+            <h4>LEADERSHIP</h4>
+            <div class="serviceImages">
+              <img src="./images/readership.png" width="150" height="138" alt="ロゴ">
+            </div>
+            <p>学生時代、グループリーダーを何度も経験しています。企業先のグループワークでリーダーを行った経験もあります。コミュニケーションを気軽に取ることができるような環境作りを心がけています。
+            </p>
+          </div>
+          <div class="serviceItems">
+            <h3>サポート</h3>
+            <h4>SUPPORT</h4>
+            <div class="serviceImages">
+              <img src="./images/support.png" width="150" height="91" alt="ロゴ">
+            </div>
+            <p>未経験の方のサポートをすることが好きです。世話好きな性格をしています。周りの研修生に対して、質問を気軽にできる雰囲気を出せるように心がけています。
+              人の役に立っていることが、自分自身のモチベーションにも繋がっています。
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+
+      <section id="studySection">
+        <h2>Study</h2>
+        <div id="studyBox">
+          <div class="studyItems">
+            <img src="./images/java.png" width="200" height="200" alt="ロゴ">
+
+            <a class="modal-syncer button-link" data-target="modal-content-01">
+              <div class="mask">
+                <div class="caption">Java</div>
+              </div>
+            </a>
+          </div>
+          <!-- モーダル処理 -->
+          <div id="modal-content-01" class="modal-content">
+            <p>Javaのフレームワークである、Springを学習しました。Spring MVC,Spring Boot,Spring Sessionなどを学習しました。</p>。</p>
+            <p>O/Rマッパーに関してもSpringを通して学習しました。
+            </p>
+            <p><a id="modal-close" class="button-link">閉じる</a></p>
+          </div>
+          
+          <div class="studyItems">
+            <img src="./images/python.png" width="200" height="200" alt="ロゴ">
+            <a class="modal-syncer button-link" data-target="modal-content-02">
+              <div class="mask">
+                <div class="caption">Python</div>
+              </div>
+            </a>      
+          </div>
+          <!-- モーダル処理 -->
+          <div id="modal-content-02" class="modal-content">
+            <p>2つ目のモーダルウィンドウです。全体を囲むdiv要素に[id="modal-content-02"]が設定されています。</p>
+            <p>「閉じる」か「背景」をクリックするとモーダルウィンドウを終了します。</p>
+            <p><a id="modal-close" class="button-link">閉じる</a></p>
+          </div>
+  
+          <div class="studyItems">
+            <img src="./images/androidjava.png" width="200" height="200" alt="ロゴ">
+            <a class="modal-syncer button-link" data-target="modal-content-03">
+              <div class="mask">
+                <div class="caption">Android<br>Java</div>
+              </div>
+            </a>      
+          </div>
+          <!-- モーダル処理 -->
+          <div id="modal-content-03" class="modal-content">
+            <p>3つ目のモーダルウィンドウです。全体を囲むdiv要素に[id="modal-content-03"]が設定されています。</p>
+            <p>「閉じる」か「背景」をクリックするとモーダルウィンドウを終了します。</p>
+            <p><a id="modal-close" class="button-link">閉じる</a></p>
+          </div>
+          
+          <div class="studyItems">
+            <img src="./images/firebase.png" width="200" height="200" alt="ロゴ">
+            <a class="modal-syncer button-link" data-target="modal-content-04">
+            <div class="mask">
+              <div class="caption">Firebase</div>
+            </div>
+            </a>
+          </div>
+          <!-- モーダル処理 -->
+          <div id="modal-content-04" class="modal-content">
+            <p>4つめ目のモーダルウィンドウです。全体を囲むdiv要素に[id="modal-content-03"]が設定されています。</p>
+            <p>「閉じる」か「背景」をクリックするとモーダルウィンドウを終了します。</p>
+            <p><a id="modal-close" class="button-link">閉じる</a></p>
+          </div>
+          
+          <div class="studyItems">
+            <img src="./images/github.png" width="200" height="200" alt="ロゴ">
+            <a class="modal-syncer button-link" data-target="modal-content-05">
+            <div class="mask">
+              <div class="caption">GitHub</div>
+            </div>
+            </a>
+          </div>
+          <!-- モーダル処理 -->
+          <div id="modal-content-05" class="modal-content">
+            <p>5つめ目のモーダルウィンドウです。全体を囲むdiv要素に[id="modal-content-03"]が設定されています。</p>
+            <p>「閉じる」か「背景」をクリックするとモーダルウィンドウを終了します。</p>
+            <p><a id="modal-close" class="button-link">閉じる</a></p>
+          </div>
+
+          <div class="studyItems">
+            <img src="./images/heroku.png" width="200" height="200" alt="ロゴ">
+            <a class="modal-syncer button-link" data-target="modal-content-06">
+            <div class="mask">
+              <div class="caption">Heroku</div>
+            </div>
+            </a>
+          </div>
+          <!-- モーダル処理 -->
+          <div id="modal-content-06" class="modal-content">
+            <p>6つめ目のモーダルウィンドウです。全体を囲むdiv要素に[id="modal-content-03"]が設定されています。</p>
+            <p>「閉じる」か「背景」をクリックするとモーダルウィンドウを終了します。</p>
+            <p><a id="modal-close" class="button-link">閉じる</a></p>
+          </div>
+
+          <div class="studyItems">
+            <img src="./images/react.png" width="200" height="200" alt="ロゴ">
+            <a class="modal-syncer button-link" data-target="modal-content-07">
+            <div class="mask">
+              <div class="caption">React</div>
+            </div>
+            </a>
+          </div>
+          
+          <!-- モーダル処理 -->
+          <div id="modal-content-07" class="modal-content">
+            <p>7つめ目のモーダルウィンドウです。全体を囲むdiv要素に[id="modal-content-03"]が設定されています。</p>
+            <p>「閉じる」か「背景」をクリックするとモーダルウィンドウを終了します。</p>
+            <p><a id="modal-close" class="button-link">閉じる</a></p>
+          </div>
+
+        </div>
+
+
+      </section>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+
     </div>
-    <button id="js-show-popup">Show Popup</button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- <script src="./js/common/jquery-3.6.0.min.js" type="text/javascript"></script> -->
+  <script src="./js/common/jquery-3.6.0.min.js" type="text/javascript"></script>
   <script src="./js/common/common.js" type="text/javascript"></script>
-   <script src="./js/common/header.js" type="text/javascript"></script>
+  <script src="./js/common/header.js" type="text/javascript"></script>
+  <script src="./js/index.js" type="text/javascript"></script>
   <script>
 
 
