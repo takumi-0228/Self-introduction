@@ -22,4 +22,6 @@
             $('.gnavi__sp-style').removeClass('active');
         }
     });
+
+    popupImage();//移動
 });
