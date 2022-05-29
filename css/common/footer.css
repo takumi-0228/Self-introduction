@@ -4,11 +4,40 @@
 footer{
   display: flex;
   height:7rem;
-  /* background-color: red; */
-  /* justify-content: space-between;
-  align-items: center; */
+  justify-content: space-around;
+  align-items: center; 
   
 }
+footer nav{
+  width:auto;
+
+}
 footer nav ul {
-  display: flex;
+  display:flex;
+  width:30rem;
+  justify-content: space-around;
+  align-items: center;
+}
+footer nav ul li{
+  /* 親要素3分割 */
+  width : 33.33333% ; /* 未対応ブラウザ用フォールバック */
+  width : -webkit-calc(100% / 3) ;
+  width : calc(100% / 3) ;
+  border-bottom: 3px solid #FFF;
+  text-align: center;
+}
+footer nav ul li:hover{
+  border-bottom: 3px solid #a9ceec;
+}
+footer nav ul li a{
+  text-decoration: none;
+}
+a:link, a:visited, a:hover, a:active {
+  color: #000;
+}
+footer div#copyright{
+  width:fit-content;
+}
+footer div#copyright p{
+  font-size: 0.7rem;
 }

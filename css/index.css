@@ -23,14 +23,13 @@ div#headerImage {
     margin-top: 6rem;
 }
 
-section#introductionSection{
+section.introductionSection{
 
     max-width: 940px;
     margin:5rem auto 0 auto;
-    /* background-color: blue; */
 }
 
-section#introductionSection h2 {
+section.introductionSection h2 {
 
     color: #777;
     font-family: 'ＭＳ Ｐ明朝';
@@ -40,7 +39,7 @@ section#introductionSection h2 {
     margin-bottom: 3rem;
 
 }
-div#introductionBox{
+div.introductionBox{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -48,20 +47,20 @@ div#introductionBox{
     margin-top: 5rem;
     margin-bottom: 10rem;
 }
-div#profileImages img{
+div.profileImages img{
     border-radius:30%;
 }
-div#introductionItem{
+div.introductionItem{
     width: 35rem;
-    /* background-color: red; */
 }
-div#introductionItem dl {
+div.introductionItem dl {
     display: flex;
     flex-wrap: wrap;
+    line-height: 2.5em;
 }
-div#introductionItem dl dt {
+div.introductionItem dl dt {
     width: 40%;
 }
-div#introductionItem dl dd {
+div.introductionItem dl dd {
     width: 60%;
 }
