@@ -2,18 +2,19 @@
 
 // ハンバーガーメニューへの切り替え
 
-// $(function () {
-//     $('.menuButton').click(function () {　//クリック処理
-//         //toggleClassメソッドは 指定したクラス名の CSS がある場合は削除を行い、なければ追加する というメソッド
-//         $(this).toggleClass('active');
-//         //対象のHTML要素にそのクラスがあるかを確認できます
-//         if ($(this).hasClass('active')) {
-//             $('.spStyle').addClass('active');
-//         } else {
-//             $('.spStyle').removeClass('active');
-//         }
-//     });
-// });
+  $(function() {//HTML要素を読み込んでからjQueryを実行する
+    $('.menu-btn').click(function() {　//クリック処理
+        $(this).toggleClass('active');//toggleClassメソッドは 指定したクラス名の CSS がある場合は削除を行い、なければ追加する というメソッド
+ 
+        if ($(this).hasClass('active')) {//対象のHTML要素にそのクラスがあるかを確認できます
+            $('.gnavi__sp-style').addClass('active');
+        } else {
+            $('.gnavi__sp-style').removeClass('active');
+        }
+    });
+
+    popupImage();//移動
+});
 
 
 
