@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* ローディングアニメーションのスタイル */
+
+@keyframes fadeout {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+  }
+}
+
+#loading_wrapper{
+  position: fixed;
+  width:100%;
+  /* ビューポートを基準に100パーセント */
+  height:100vh;
+  background-color: #fff;
+  animation-name: fadeout;
+  animation-duration:5s;
+  /* 最後の状態で止める */
+  animation-fill-mode: forwards;
+}
+#loading_container{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  display: block;  
+  font-size: 25px;
+  color: #777;
+}
+.L{
+  position: absolute;
+  left:5%;
+  top:50%;
+  animation: L 2s infinite;
+}
+.O{
+  position: absolute;
+  left:18%;
+  top:50%;
+  animation: O 2s infinite;
+  animation-delay: 100ms;
+}
+.A{
+  position: absolute;
+  left:35%;
+  top:50%;
+  animation: A 2s infinite;
+  animation-delay: 200ms;
+}
+.D{
+  position: absolute;
+  left:50%;
+  top:50%;
+  animation: D 2s infinite;
+  animation-delay: 300ms;
+}
+.I{
+  position: absolute;
+  left:65%;
+  top:50%;
+  animation: I 2s infinite;
+  animation-delay: 400ms;
+}
+.N{
+  position: absolute;
+  left:75%;
+  top:50%;
+  animation: N 2s infinite;
+  animation-delay: 500ms;
+}
+.G{
+  position: absolute;
+  left:90%;
+  top:50%;
+  animation: G 2s infinite;
+  animation-delay: 600ms;
+}
+
+@-webkit-keyframes L {
+  0% {top:0px; opacity:0;}
+  50% {top:50px; opacity: 1;}
+  100% {top:0px; opacity: 0;}
+}
+@-webkit-keyframes O {
+  0% {top:0px; opacity:0;}
+  50% {top:50px; opacity: 1;}
+  100% {top:0px; opacity: 0;}
+}
+@-webkit-keyframes A {
+  0% {top:0px; opacity:0;}
+  50% {top:50px; opacity: 1;}
+  100% {top:0px; opacity: 0;}
+}
+@-webkit-keyframes D {
+  0% {top:0px; opacity:0;}
+  50% {top:50px; opacity: 1;}
+  100% {top:0px; opacity: 0;}
+}
+@-webkit-keyframes I {
+  0% {top:0px; opacity:0;}
+  50% {top:50px; opacity: 1;}
+  100% {top:0px; opacity: 0;}
+}
+@-webkit-keyframes N {
+  0% {top:0px; opacity:0;}
+  50% {top:50px; opacity: 1;}
+  100% {top:0px; opacity: 0;}
+}
+@-webkit-keyframes G {
+  0% {top:0px; opacity:0;}
+  50% {top:50px; opacity: 1;}
+  100% {top:0px; opacity: 0;}
+}

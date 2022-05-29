@@ -11,10 +11,38 @@
   <link rel="stylesheet" href="..//css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/common/header.css">
+  <link rel="stylesheet" href="../css/common/footer.css">
+  <link rel="stylesheet" href="../css/common/loadinganimation.css">
   <link rel="stylesheet" href="../css/works.css">
 </head>
 
 <body>
+
+  <div id="loading_wrapper">
+    <div id="loading_container">
+      <div class="L">
+        <p>L</p>
+      </div>
+      <div class="O">
+        <p>O</p>
+      </div>
+      <div class="A">
+        <p>A</p>
+      </div>
+      <div class="D">
+        <p>D</p>
+      </div>
+      <div class="I">
+        <p>I</p>
+      </div>
+      <div class="N">
+        <p>N</p>
+      </div>
+      <div class="G">
+        <p>G</p>
+      </div>
+    </div>
+  </div>
 
   <div id="wrapper">
     <html>
@@ -44,17 +72,21 @@
             <img src="../images/contactAdderss.jpeg" alt="ロゴ">
           </a>
         </div>
-          <!-- モーダル処理 -->
-          <div id="modal-content-00" class="modal-content">
-            <img src="../images/contactQR.png" alt="ロゴ">
-            <p><a id="modal-close" class="button-link">閉じる</a></p>
-          </div>
+
+        <div class="toggle">
+          <input type="checkbox" name="check" />
+        </div>
+
+        <div id="modal-content-00" class="modal-content">
+          <img src="../images/contactQR.png" alt="ロゴ">
+          <p><a id="modal-close" class="button-link">閉じる</a></p>
+        </div>
 
       </div>
       <!-- ナビゲーション -->
       <div id="nav">
 
-        <nav class="gnavi__pc-style">
+        <nav class="pcStyle">
           <ul>
             <li><a href="../index.html">profile</a></li>
             <li><a href="./target.html">target</a></li>
@@ -63,13 +95,13 @@
         </nav>
 
         <!--768px以下で表示-->
-        <div class="menu-btn">
+        <div class="menuButton">
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        <nav class="gnavi__sp-style">
+        <nav class="spStyle">
           <ul>
             <li><a href="../index.html">profile</a></li>
             <li><a href="./target.html">target</a></li>
@@ -81,8 +113,8 @@
       </div>
       <hr>
     </header>
-    <div id="main">
 
+    <div id="main">
 
       <section id="serviceSection">
         <h2>Service</h2>
@@ -93,8 +125,13 @@
             <div class="serviceImages">
               <img src="../images/cording.png" width="100" height="126" alt="ロゴ">
             </div>
-            <p>
-              詳細設計を元に、システムの実装をすることができます。アプリやWEBサイト、APIなどの製作を行います。主にバックエンドのシステムを作ることが得意です。現在フロントエンドの学習を行っており、なんでもできる人を目指しています。
+            <p class="japanese">
+              詳細設計を元に、システムの実装をすることができます。アプリやWEBサイト、APIなどの製作を行います。主にバックエンドのシステムを作ることが得意です。現在フロントエンドの学習を行っており、なんでもできる技術者を目指しています。
+            </p>
+            <p class="english">
+              You can implement the system based on the detailed design. We produce apps, websites, APIs, etc. I am
+              mainly good at making back-end systems. I am currently studying the front end and aim to be an engineer
+              who can do anything.
             </p>
           </div>
           <div class="serviceItems">
@@ -103,7 +140,12 @@
             <div class="serviceImages">
               <img src="../images/readership.png" width="150" height="138" alt="ロゴ">
             </div>
-            <p>学生時代、グループリーダーを何度も経験しています。企業先のグループワークでリーダーを行った経験もあります。コミュニケーションを気軽に取ることができるような環境作りを心がけています。
+            <p class="japanese">
+              学生時代、グループリーダーを何度も経験しています。企業先のグループワークでリーダーを行った経験もあります。コミュニケーションを気軽に取ることができるような環境作りを心がけています。
+            </p>
+            <p class="english">
+              As a student, I have been a group leader many times. I also have experience as a leader in group work at a
+              company. I try to create an environment where I can easily communicate.
             </p>
           </div>
           <div class="serviceItems">
@@ -112,8 +154,14 @@
             <div class="serviceImages">
               <img src="../images/support.png" width="150" height="91" alt="ロゴ">
             </div>
-            <p>未経験の方のサポートをすることが好きです。世話好きな性格をしています。周りの研修生に対して、質問を気軽にできる雰囲気を出せるように心がけています。
-              人の役に立っていることが、自分自身のモチベーションにも繋がっています。
+            <p class="japanese">
+              未経験の方のサポートをすることが好きです。世話好きな性格をしています。周りの研修生に対して、質問を気軽にできる雰囲気を出せるように心がけています。
+              他の研修生の役に立っていることが、自分自身のモチベーションにも繋がっています。
+            </p>
+            <p class="english">
+              I like to support inexperienced people. I have a caring personality. I try to create an atmosphere where I
+              can feel free to ask questions to the trainees around me.
+              The usefulness of other trainees also leads to my own motivation.
             </p>
           </div>
         </div>
@@ -135,105 +183,183 @@
           </div>
           <!-- モーダル処理 -->
           <div id="modal-content-01" class="modal-content">
-            <p>Javaのフレームワークである、Springを学習しました。Spring MVC,Spring Boot,Spring Sessionなどを学習しました。</p>。</p>
-            <p>O/Rマッパーに関してもSpringを通して学習しました。
-            </p>
+            <div class="japanese">
+              <p>Javaのフレームワークである、Springを学習しました。</p>
+              <p>Spring MVC,Spring Boot,Spring Sessionなどを学習しました。</p>
+              <p>O/Rマッパーに関してもSpringを通して学習しました。</p>
+              <p>SQLインジェクションなどのセキュリティに関しても学習しました。</p>
+              <p>ネットワークやDBのセキュリティに非常に興味があるため、深く掘り下げて学習していきます。</p>
+            </div>
+            <div class="english">
+              <p>I learned Spring, a Java framework.</p>
+              <p>I learned Spring MVC, Spring Boot, Spring Session, etc.</p>
+              <p>I also learned about O / R mappers through Spring.</p>
+              <p>You also learned about security such as SQL injection.</p>
+              <p>I am very interested in network and DB security, so I will dig deeper and learn.</p>
+            </div>
             <p><a id="modal-close" class="button-link">閉じる</a></p>
           </div>
-          
+
           <div class="studyItems">
             <img src="../images/python.png" width="200" height="200" alt="ロゴ">
             <a class="modal-syncer button-link" data-target="modal-content-02">
               <div class="mask">
                 <div class="caption">Python</div>
               </div>
-            </a>      
+            </a>
           </div>
           <!-- モーダル処理 -->
           <div id="modal-content-02" class="modal-content">
-            <p>テストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータ</p>
-            
+            <div class="japanese">
+              <p>流行りのプログラミング言語に関しても学習していこうと思い、Pythonを学習しました。</p>
+              <p>Djangoというフレームワークを学習したのですが、初めてのフレームワークだったため、非常に苦労した記憶があります。</p>
+              <p>MVCアーキテクチャの考え方を知ったのもDjangoを通じてです。</p>
+              <p>今後は機械学習に関しても挑戦していきたいです。</p>
+            </div>
+            <div class="english">
+              <p>I learned Python because I wanted to learn about popular programming languages.</p>
+              <p>I learned a framework called Django, but since it was my first framework, I remember having a lot of
+                trouble.</p>
+              <p>It was through Django that I learned the idea of ​​MVC architecture.</p>
+              <p>In the future, I would like to take on the challenge of machine learning as well.</p>
+            </div>
             <p><a id="modal-close" class="button-link">閉じる</a></p>
           </div>
-  
+
           <div class="studyItems">
             <img src="../images/androidjava.png" width="200" height="200" alt="ロゴ">
             <a class="modal-syncer button-link" data-target="modal-content-03">
               <div class="mask">
                 <div class="caption">Android<br>Java</div>
               </div>
-            </a>      
+            </a>
           </div>
           <!-- モーダル処理 -->
           <div id="modal-content-03" class="modal-content">
-            <p>テストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータ</p>
+            <div class="japanese">
+              <p>Webサイトを作成することが多く、飽きてきたこともあり、スマホアプリにも挑戦してみようと思い始めました。</p>
+              <p>スマホアプリはWebサイトと比べて、処理の流れが難しくアクティビティ(ユーザーに操作を提供する画面)のライフサイクルに関してしっかりと把握しなければいけなく良い経験になりました。</p>
+            </div>
+            <div>
+              <p>Since I often create websites and get tired of it, I started thinking about trying smartphone apps.</p>
+              <p>Compared to websites, smartphone apps have a difficult process flow and it was a good experience to have a firm grasp of the life cycle of activities (screens that provide operations to users).</p>
+            </div>
             <p><a id="modal-close" class="button-link">閉じる</a></p>
           </div>
-          
+
           <div class="studyItems">
             <img src="../images/firebase.png" width="200" height="200" alt="ロゴ">
             <a class="modal-syncer button-link" data-target="modal-content-04">
-            <div class="mask">
-              <div class="caption">Firebase</div>
-            </div>
+              <div class="mask">
+                <div class="caption">Firebase</div>
+              </div>
             </a>
           </div>
           <!-- モーダル処理 -->
           <div id="modal-content-04" class="modal-content">
-            <p>テストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータ</p>
+            <div class="japanese">
+            <p>Oracle DatabaseやMySQL、PostgreSQL、SQLiteなど複数のデータベースを学習してきましたが、クラウドサービスに関しても学習したいと思い、学習を始めました。</p>
+            <p>KotlinとFirebaseを連携し、アンドロイドアプリを製作しました。</p>
+            <p>Firebaseのデータベースへのアクセスは非同期処理が多く、非同期通信に関する知識が深まりました。</p>
+            </div>
+            <div>
+              <p>I have learned multiple databases such as Oracle Database, MySQL, PostgreSQL, SQLite, but I also wanted to learn about cloud services, so I started learning.</p>
+              <p>I made an android application by linking Kotlin and Firebase.</p>
+              <p>Accessing the Firebase database is often asynchronous, which has deepened my knowledge of asynchronous communication.</p>
+            </div>
             <p><a id="modal-close" class="button-link">閉じる</a></p>
           </div>
-          
+
           <div class="studyItems">
             <img src="../images/github.png" width="200" height="200" alt="ロゴ">
             <a class="modal-syncer button-link" data-target="modal-content-05">
-            <div class="mask">
-              <div class="caption">GitHub</div>
-            </div>
+              <div class="mask">
+                <div class="caption">GitHub</div>
+              </div>
             </a>
           </div>
           <!-- モーダル処理 -->
           <div id="modal-content-05" class="modal-content">
-            <p>テストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータ</p>
+            <div class="japanese">
+            <p>ソースコードの管理ツールが必要だと感じ、GitHubを学習し始めました。</p>
+            <p>基本コマンドは学習済みですが、応用的なコマンド及び、GitHubのGUIツールをうまく活用できていないため現在も学習中です。</p>
+            <p>複数人での開発経験が少ないため、新人研修を通じてより知識を深めていきます。</p>
+            </div>
+            <div class="english">
+            <p>I felt I needed a source code management tool and started learning GitHub.</p>
+            <p>I have already learned the basic commands, but I am still learning because I have not been able to make good use of the applied commands and GUI tools on GitHub.</p>
+            <p>Since we have little development experience with multiple people, we will deepen our knowledge through training for new employees.</p>
+            </div>
             <p><a id="modal-close" class="button-link">閉じる</a></p>
           </div>
 
           <div class="studyItems">
             <img src="../images/heroku.png" width="200" height="200" alt="ロゴ">
             <a class="modal-syncer button-link" data-target="modal-content-06">
-            <div class="mask">
-              <div class="caption">Heroku</div>
-            </div>
+              <div class="mask">
+                <div class="caption">Heroku</div>
+              </div>
             </a>
           </div>
           <!-- モーダル処理 -->
           <div id="modal-content-06" class="modal-content">
-            <p>テストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータ</p>
+            <div class="japanese">
+            <p>インフラ周りを学習していないと感じたためまずは一番簡単なPaaSであるHerokuを学習しました。</p>
+            <p>ローカル環境だと動かない処理もあるため、テスト環境としてよく利用しています。</p>
+            <p>現時点ではあまりインフラ周りのカスタマイズをした経験がないため、AWSなどを学習し最終的には一から構築できるレベルにまでなっていきたいです。</p>
+            </div>
+            <div>
+              <p>I felt that I wasn't learning about infrastructure, so I first learned Heroku, which is the simplest PaaS.</p>
+              <p>I often use it as a test environment because some processes do not work in the local environment.</p>
+              <p>At the moment, I don't have much experience in customizing infrastructure, so I would like to learn AWS and finally reach a level where I can build from scratch.</p>
+            </div>
             <p><a id="modal-close" class="button-link">閉じる</a></p>
           </div>
 
           <div class="studyItems">
             <img src="../images/react.png" width="200" height="200" alt="ロゴ">
             <a class="modal-syncer button-link" data-target="modal-content-07">
-            <div class="mask">
-              <div class="caption">React</div>
-            </div>
+              <div class="mask">
+                <div class="caption">React</div>
+              </div>
             </a>
           </div>
-          
+
           <!-- モーダル処理 -->
           <div id="modal-content-07" class="modal-content">
-            <p>テストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータテストデータ</p>
+            <div class="japanese">
+            <p>バックエンドの学習ばかりやっていたため、フロントエンドの技術に関しても習得したいと思い、現在学習中です。</p>
+            <p>UIを意識したデザインを行うことができるように、色彩理論や人間工学を学習します。</p>
+            <p>React Nativeを学習し、クロスプラットフォームのアプリ開発を製作できるレベルにまで深く掘り下げて学習することが最終目標です。</p>
+            </div>
+            <div class="english">
+              <p>Since I was only learning the backend, I want to learn about the frontend technology, so I am currently learning.</p>
+              <p>You will study color theory and ergonomics so that you can design with UI in mind.</p>
+              <p>The ultimate goal is to learn React Native and dig deep enough to create cross-platform app development.</p>
+            </div>
             <p><a id="modal-close" class="button-link">閉じる</a></p>
           </div>
 
         </div>
-
-
       </section>
 
-
     </div>
+
+    <footer>
+      <div>
+        <nav class="fotterNav">
+          <ul>
+            <li><a href="../index.html">profile</a></li>
+            <li><a href="./target.html">target</a></li>
+            <li><a href="./works.html">works</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div div id="copyright">
+        <p>©️ takumi kato 2020</p>
+      </div>
+    </footer>
+
   </div>
   <script src="../js/common/jquery-3.6.0.min.js" type="text/javascript"></script>
   <script src="../js/common/common.js" type="text/javascript"></script>

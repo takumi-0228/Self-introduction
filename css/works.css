@@ -66,13 +66,12 @@ section#studySection {
     height: auto;
     margin: 0 auto;
 
-    text-align: center;
+    text-align: left;
 }
 
 section#studySection div#studyBox {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
     margin-top: 4rem;
 }
@@ -80,7 +79,6 @@ section#studySection div#studyBox {
 section#studySection div#studyBox div.studyItems {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 300px;
     height: 300px;
     margin: 5px;
@@ -92,7 +90,6 @@ section#studySection div#studyBox div.studyItems {
 .studyItems {
     overflow: hidden;
     position: relative;
-    /* 相対位置指定 */
 }
 
 .studyItems .caption {
@@ -108,7 +105,6 @@ section#studySection div#studyBox div.studyItems {
     width: 100%;
     height: 100%;
     position: absolute;
-    /* 絶対位置指定 */
     top: 0;
     left: 0;
     opacity: 0;
@@ -126,8 +122,13 @@ section#studySection div#studyBox div.studyItems {
     /* マスクを表示する */
 }
 
+.studyItems img {
+    margin:auto;
+}
 
 /* Study header.cssのモーダルを使用 */
 
 
-
+.modal-content{
+    width:500px;
+}

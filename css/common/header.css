@@ -1,12 +1,6 @@
 @charset "UTF-8";
 /* ヘッダーのスタイル */
 
-
-header {
-  width: auto;
-  height: auto;
-}
-
 div#logoLink{
   display: flex;
 
@@ -16,125 +10,127 @@ div#logoLink{
 }
 /* ロゴ画像 */
 div#logo{
-  width: 18.75em;
-  height: 9.375em;
   margin-left: 10rem;
+}
 
-}
- div#logo img{
-    width: 18.75em; 
-    height: 9.375em; 
-}
-/* 連絡先画像 */
-div#link{
-  width: 2rem;
-  height: 2rem;
+div#linkBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:400px;
+  background-color: red;
+  /* margin-rightを基準にするためにleftはauto */
   margin-left: auto;
   margin-right: 10rem;
+}
+/* リンク */
+div.link{
+  width: 2rem;
+  height: 2rem;
+  background-color: green;
 
 }
-div#link img{
+div.link img{
     display: block;
     width: 2rem; 
     height: 2rem; 
 } 
+div#toggleBox{
+  width: 80px;
+  background-color: blue;
+}
 
 
 /* -------ナビゲーション---------------------- */
 
   
-.gnavi__pc-style {
-  width: 20rem;
+.pcStyle {
+  width: 30rem;
   margin: 0  5rem 3rem  auto;
   font-size: 0.9rem;
 }
-.gnavi__pc-style ul {
+.pcStyle ul {
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 }
-.gnavi__pc-style ul li {
+.pcStyle ul li {
   /* 親要素3分割 */
   width : 33.33333% ; /* 未対応ブラウザ用フォールバック */
   width : -webkit-calc(100% / 3) ;
   width : calc(100% / 3) ;
   text-align: center;
+  /* ホバーした時にボーダー分ずれないように白のボーダーをつけている */
   border-bottom: 3px solid #FFF;
 }
-.gnavi__pc-style ul li:hover{
+.pcStyle ul li:hover{
 color: #E7DA66;
-border-bottom: 3px solid #F0E475;
+border-bottom: 3px solid #a9ceec;
 }
-.gnavi__pc-style ul li a{
+.pcStyle ul li a{
+  /* テキストの装飾を指定するプロパティ */
     text-decoration: none;
     color: #555;
-    padding-bottom: 5px;
   }
 
-/*ここから下がハンバーガーメニューのスタイル*/
-.gnavi__sp-style {
+/*ハンバーガーメニューのスタイル*/
+.spStyle {
 display: none;
 }
 @media screen and (max-width: 768px) {/* 767px以下用（タブレット／スマートフォン用）の記述 */
-.gnavi__pc-style {
+.pcStyle {
 display: none;    
 }
-.gnavi__sp-style {
+.spStyle {
 display: block;
 }
 
 /*メニューボタン　展開前*/
-.menu-btn {
+.menuButton {
 display : block;
 position: fixed;
 z-index : 3;
+/* 右上に固定 */
 right : 30px;
 top   : 20px;
 width : 42px;
 height: 42px;
 cursor: pointer;
-text-align: center;
 }
-.menu-btn span {
+/* 横３のデザイン */
+.menuButton span {
 display : block;
 position: absolute;
 width   : 30px;
 height  : 2px ;
-left    : 6px;
 background : #555;
--webkit-transition: 0.3s ease-in-out;
--moz-transition   : 0.3s ease-in-out;
+/* 徐々に加速する。 */
 transition        : 0.3s ease-in-out;
 }
-.menu-btn span:nth-of-type(1) {
+.menuButton span:nth-of-type(1) {
 top: 10px;
 }
-.menu-btn span:nth-of-type(2) {
+.menuButton span:nth-of-type(2) {
 top: 20px;
 }
-.menu-btn span:nth-of-type(3) {
+.menuButton span:nth-of-type(3) {
 top: 30px;
 }
 
-/*メニューボタン　展開後*/
-.menu-btn.active span:nth-child(1) {
+/*メニューボタン　展開後　横3のデザインを✖に変える*/
+.menuButton.active span:nth-child(1) {
 top : 16px;
-left: 6px;
 background :#fff;
--webkit-transform: rotate(-45deg);
--moz-transform   : rotate(-45deg);
 transform        : rotate(-45deg);
 }
-.menu-btn.active span:nth-child(2),
-.menu-btn.active span:nth-child(3) {
+.menuButton.active span:nth-child(2),
+.menuButton.active span:nth-child(3) {
 top: 16px;
 background :#fff;
--webkit-transform: rotate(45deg);
--moz-transform   : rotate(45deg);
 transform        : rotate(45deg);
 }
 
 /*スマホ用のメニュー*/
-.gnavi__sp-style {
+.spStyle {
 position: fixed;
 z-index: 2;
 top: 0;
@@ -143,36 +139,41 @@ color: #fff;
 background-color: rgba(0,0,0,0.7);
 text-align: center;
 width: 100%;
-  height: 100vh;
+/* ビューポートを基準に100パーセント */
+height: 100vh;
 opacity: 0;
 transition: opacity .6s ease, visibility .6s ease;
+/* 縦向き真ん中に持ってくる */
   display: flex;
   align-items: center;
 }
-.gnavi__sp-style ul {
+.spStyle ul {
 margin: 0 auto;
 padding: 0;
 width: 100%;
 }
-.gnavi__sp-style ul li {
+.spStyle ul li {
 list-style-type: none;
 padding: 0;
 width: 100%;
 transition: .4s all;
 }
-.gnavi__sp-style ul li:last-of-type {
+.spStyle ul li:last-of-type {
 padding-bottom: 0;
 }
-.gnavi__sp-style ul li:hover{
+.spStyle ul li:hover{
 background :#ddd;
 }
-.gnavi__sp-style ul li a {
+.spStyle ul li:hover a{
+color :#333;
+}
+.spStyle ul li a {
 display: block;
 color: #fff;
 padding: 1em 0;
 text-decoration :none;
 }
-.gnavi__sp-style.active {
+.spStyle.active {
 opacity: 1;
 }
 }
@@ -210,4 +211,63 @@ opacity: 1;
 .button-link:hover {
 	cursor: pointer ;
 	color: #f00 ;
+}
+
+
+
+/* 英語日本語切り替えデザイン */
+.toggle {
+  position: relative;
+  width: 80px;
+  height: 43px;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.toggle input[type=checkbox] {
+  display: none;
+}
+.toggle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #777;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+.toggle:after {
+  content: "日本語";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 60px;
+  height: 36px;
+  display: block;
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 0 9px 28px -6px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  text-align: center;
+  padding: 14px 0 0;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: bold;
+  color: #777;
+  letter-spacing: .5px;
+  box-sizing: border-box;
+}
+.toggle.checked:before {
+  background: #00008b;
+}
+.toggle.checked:after {
+  content: "English";
+  left: 15px;
+  box-shadow: 0 9px 28px -6px rgba(0, 0, 0, 0.5);
+  color: #00008b;
+  padding: 14px 0 0 1px;
 }
